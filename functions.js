@@ -1,9 +1,6 @@
 const { Gpio } = require('onoff');
 
 const ledExample = () =>{
-    // Handler when the DOM is fully loaded
-    
-
     // set BCM 4 pin as 'output'
     const ledOut = new Gpio('4', 'out');
 
@@ -16,6 +13,7 @@ const ledExample = () =>{
         isLedOn = !isLedOn; // toggle state
         console.log(isLedOn);
     },500);
+
   };
 
 module.exports ={

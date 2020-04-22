@@ -7,11 +7,14 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
 const functions = require('./functions.js');
+const lcdDisplay = require('./lcd.js');
+
+functions.ledExample();
 
 //ROUTES------------------------------------------------------
 
 app.get('/', (req, res) => {
-    functions.ledExample();
+    functions.ledFast();
     res.render('index.ejs')
 });
 
